@@ -1,0 +1,1 @@
+# Praktikumstrukturdata_AhmadRidhosaputra_2555061002
