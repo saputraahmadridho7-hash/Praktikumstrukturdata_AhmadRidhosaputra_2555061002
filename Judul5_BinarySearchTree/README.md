@@ -173,4 +173,4 @@ berikut adalah kode dari program MMembuat Manajemen Buku Perpustakaan Menggunaka
 - Predecessor (Menu 7): Sama halnya dengan successor, program akan mencari buku pendahulunya. Jika tidak ditemukan, akan memberikan peringatan: "Tidak ada predecessor untuk ISBN [isbn] (mungkin ISBN tidak ada atau yang terkecil)."
   
 ## e. Link Youtube
-https://youtu.be/WzZOGZcMkFo
+https://youtu.be/u5HbIy0caXo
