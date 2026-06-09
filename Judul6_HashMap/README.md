@@ -62,13 +62,10 @@ berikut adalah kode dari program MMembuat Manajemen Buku Perpustakaan Menggunaka
   
 ## d. Output Program
 
-<img width="1294" height="735" alt="image" src="https://github.com/user-attachments/assets/ff22076d-9a68-40fd-a2ca-a621c8b5043c" />
-<img width="543" height="698" alt="image" src="https://github.com/user-attachments/assets/01a79d59-172b-40b1-8abf-9ca0e91a3ce6" />
-<img width="477" height="706" alt="image" src="https://github.com/user-attachments/assets/98f45aec-4580-49a1-8a2e-11f480bcab79" />
-<img width="506" height="731" alt="image" src="https://github.com/user-attachments/assets/ef03496e-d393-4a31-8539-e91ff60cdc1f" />
-<img width="511" height="873" alt="image" src="https://github.com/user-attachments/assets/852d0ed3-6ee4-4f06-ba45-0603ac679b0e" />
-<img width="1116" height="569" alt="image" src="https://github.com/user-attachments/assets/02e07587-4569-41b1-bdd6-7122883c3c8c" />
-
+<img width="621" height="761" alt="image" src="https://github.com/user-attachments/assets/e38c80b2-4033-42af-8478-ad67b801496c" />
+<img width="518" height="774" alt="image" src="https://github.com/user-attachments/assets/bdb21b54-44ce-431e-a28b-1cec8f552710" />
+<img width="646" height="771" alt="image" src="https://github.com/user-attachments/assets/4c3d7225-e2ff-4e85-8928-385fc49ea1b8" />
+<img width="437" height="235" alt="image" src="https://github.com/user-attachments/assets/7b599c74-a28b-4d4a-9a22-149f6192260f" />
 
 1. Tampilan Menu Utama
 - Saat program pertama kali dijalankan, layar akan langsung menampilkan teks awalan berupa --- Menu Nilai Raport ---.
@@ -103,4 +100,4 @@ berikut adalah kode dari program MMembuat Manajemen Buku Perpustakaan Menggunaka
 - Jika pengguna memilih opsi 5, program mencetak baris perpisahan "Keluar dari menu Nilai Raport." lalu memanggil instruksi break yang akan mengakhiri perulangan (looping) dan menghentikan jalannya program secara otomatis.
   
 ## e. Link Youtube
-https://youtu.be/u5HbIy0caXo
+https://youtu.be/a-vPY5N2CQE
