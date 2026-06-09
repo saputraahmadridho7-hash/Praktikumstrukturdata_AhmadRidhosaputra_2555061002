@@ -71,53 +71,36 @@ berikut adalah kode dari program MMembuat Manajemen Buku Perpustakaan Menggunaka
 
 
 1. Tampilan Menu Utama
+- Saat program pertama kali dijalankan, layar akan langsung menampilkan teks awalan berupa --- Menu Nilai Raport ---.
+- Program kemudian menampilkan 5 opsi tindakan (berbentuk teks CLI) yang bisa dipilih oleh pengguna, yaitu: Tambah Nilai Raport (Nama, Total Nilai), Cari Nilai Raport (Nama), Hapus Nilai Raport (Nama), Tampilkan Semua Nilai Raport, dan Keluar.
 
-Saat program pertama kali dijalankan, layar akan langsung menampilkan teks awalan berupa --- Menu Nilai Raport ---.
+2. Input Pilihan Menu & Penanganan Error Pilihan
+- Setelah menu ditampilkan, program akan memunculkan prompt Pilih opsi (1-5):  dan menunggu pengguna mengetikkan angka pilihannya.
+- Jika pengguna memasukkan angka selain 1 hingga 5, atau memasukkan karakter acak pada prompt ini, program akan masuk ke kondisi else dan mencetak pesan peringatan "Opsi tidak valid. Silakan pilih antara 1 dan 5.", lalu memunculkan kembali menu utama secara berulang.
 
-Program kemudian menampilkan 5 opsi tindakan (berbentuk teks CLI) yang bisa dipilih oleh pengguna, yaitu: Tambah Nilai Raport (Nama, Total Nilai), Cari Nilai Raport (Nama), Hapus Nilai Raport (Nama), Tampilkan Semua Nilai Raport, dan Keluar.
+3. Tampilan Hasil Penambahan Nilai (Menu 1)
+- Jika pengguna mengetik angka 1, program akan meminta dua input secara berurutan: "Masukkan nama siswa: " dan "Masukkan total nilai raport: ".
+- Program sudah dibekali dengan penanganan error (try-except ValueError) khusus pada saat pengisian total nilai. Apabila pengguna mengetikkan huruf atau simbol (bukan angka), program tidak akan crash, melainkan mencetak pesan "Total nilai harus berupa angka." lalu kembali ke menu utama.
+- Jika eksekusi berhasil, program menampilkan pesan sukses: "Nilai raport [Nama] berhasil ditambahkan/diperbarui.". Namun, jika gagal karena array sudah terisi penuh (15 elemen terisi), akan muncul pesan "Gagal menambahkan nilai raport [Nama]. Mungkin tabel penuh.".
 
-Input Pilihan Menu & Penanganan Error Pilihan
+4. Tampilan Hasil Pencarian Nilai (Menu 2)
+- Jika pengguna mengetik angka 2, program memunculkan prompt "Masukkan nama siswa yang dicari: ".
+- Jika nama yang dicari ada di dalam tabel Hash Map, program akan mencetak output berupa: "Nilai raport [Nama]: [Total Nilai]".
+- Sebaliknya, jika pencarian menemui status EMPTY sebelum menemukan kunci yang pas, program akan mencetak pesan: "Nilai raport [Nama] tidak ditemukan.".
 
-Setelah menu ditampilkan, program akan memunculkan prompt Pilih opsi (1-5):  dan menunggu pengguna mengetikkan angka pilihannya.
+5. Tampilan Hasil Penghapusan Nilai (Menu 3)
+- Jika memilih menu 3, program memunculkan prompt "Masukkan nama siswa yang akan dihapus: ".
+- Apabila nama ditemukan dan statusnya berhasil diubah menjadi DELETED, akan tercetak pesan "Nilai raport [Nama] berhasil dihapus.".
+- Jika nama tersebut tidak ada di dalam sistem, program akan menampilkan "Nilai raport [Nama] tidak ditemukan atau gagal dihapus.".
 
-Jika pengguna memasukkan angka selain 1 hingga 5, atau memasukkan karakter acak pada prompt ini, program akan masuk ke kondisi else dan mencetak pesan peringatan "Opsi tidak valid. Silakan pilih antara 1 dan 5.", lalu memunculkan kembali menu utama secara berulang.
+6. Tampilan Isi Keseluruhan Tabel (Menu 4)
+- Saat memilih angka 4, layar akan mencetak judul Isi Hash Table (Open Addressing, Linear Probing): diikuti dengan daftar array dari indeks 0: hingga 14: (total 15 baris).
+- Status indeks yang belum pernah diisi akan tercetak sebagai EMPTY.
+- Status indeks yang datanya sudah dihapus via Menu 3 akan tercetak sebagai DELETED.
+- Status indeks yang memiliki data aktif akan menampilkan isi datanya dalam bentuk kordinat nilai, contoh: (Budi, 85).
 
-Tampilan Hasil Penambahan Nilai (Menu 1)
-
-Jika pengguna mengetik angka 1, program akan meminta dua input secara berurutan: "Masukkan nama siswa: " dan "Masukkan total nilai raport: ".
-
-Program sudah dibekali dengan penanganan error (try-except ValueError) khusus pada saat pengisian total nilai. Apabila pengguna mengetikkan huruf atau simbol (bukan angka), program tidak akan crash, melainkan mencetak pesan "Total nilai harus berupa angka." lalu kembali ke menu utama.
-
-Jika eksekusi berhasil, program menampilkan pesan sukses: "Nilai raport [Nama] berhasil ditambahkan/diperbarui.". Namun, jika gagal karena array sudah terisi penuh (15 elemen terisi), akan muncul pesan "Gagal menambahkan nilai raport [Nama]. Mungkin tabel penuh.".
-
-Tampilan Hasil Pencarian Nilai (Menu 2)
-
-Jika pengguna mengetik angka 2, program memunculkan prompt "Masukkan nama siswa yang dicari: ".
-
-Jika nama yang dicari ada di dalam tabel Hash Map, program akan mencetak output berupa: "Nilai raport [Nama]: [Total Nilai]".
-
-Sebaliknya, jika pencarian menemui status EMPTY sebelum menemukan kunci yang pas, program akan mencetak pesan: "Nilai raport [Nama] tidak ditemukan.".
-
-Tampilan Hasil Penghapusan Nilai (Menu 3)
-
-Jika memilih menu 3, program memunculkan prompt "Masukkan nama siswa yang akan dihapus: ".
-
-Apabila nama ditemukan dan statusnya berhasil diubah menjadi DELETED, akan tercetak pesan "Nilai raport [Nama] berhasil dihapus.".
-
-Jika nama tersebut tidak ada di dalam sistem, program akan menampilkan "Nilai raport [Nama] tidak ditemukan atau gagal dihapus.".
-
-Tampilan Isi Keseluruhan Tabel (Menu 4)
-
-Saat memilih angka 4, layar akan mencetak judul Isi Hash Table (Open Addressing, Linear Probing): diikuti dengan daftar array dari indeks 0: hingga 14: (total 15 baris).
-
-Status indeks yang belum pernah diisi akan tercetak sebagai EMPTY.
-
-Status indeks yang datanya sudah dihapus via Menu 3 akan tercetak sebagai DELETED.
-
-Status indeks yang memiliki data aktif akan menampilkan isi datanya dalam bentuk kordinat nilai, contoh: (Budi, 85).
-
-Tampilan Keluar (Menu 5)
-
-Jika pengguna memilih opsi 5, program mencetak baris perpisahan "Keluar dari menu Nilai Raport." lalu memanggil instruksi break yang akan mengakhiri perulangan (looping) dan menghentikan jalannya program secara otomatis.
+7. Tampilan Keluar (Menu 5)
+- Jika pengguna memilih opsi 5, program mencetak baris perpisahan "Keluar dari menu Nilai Raport." lalu memanggil instruksi break yang akan mengakhiri perulangan (looping) dan menghentikan jalannya program secara otomatis.
+  
 ## e. Link Youtube
 https://youtu.be/u5HbIy0caXo
